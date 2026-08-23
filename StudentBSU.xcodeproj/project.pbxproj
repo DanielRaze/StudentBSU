@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		65EF88D9303B988D00BBD960 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 65EF88D8303B988D00BBD960 /* FirebaseCore */; };
+		65EF88DB303B988D00BBD960 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 65EF88DA303B988D00BBD960 /* FirebaseRemoteConfig */; };
+		65EF88DD303B988D00BBD960 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 65EF88DC303B988D00BBD960 /* FirebaseStorage */; };
+		65EF88E0303B98E000BBD960 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 65EF88DF303B98E000BBD960 /* SwiftSoup */; };
+		65EF88E2303B98E000BBD960 /* SwiftSoupProfile in Frameworks */ = {isa = PBXBuildFile; productRef = 65EF88E1303B98E000BBD960 /* SwiftSoupProfile */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		652CFF6C2FDD801B00E7E914 /* StudentBSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentBSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +44,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65EF88E2303B98E000BBD960 /* SwiftSoupProfile in Frameworks */,
+				65EF88D9303B988D00BBD960 /* FirebaseCore in Frameworks */,
+				65EF88E0303B98E000BBD960 /* SwiftSoup in Frameworks */,
+				65EF88DB303B988D00BBD960 /* FirebaseRemoteConfig in Frameworks */,
+				65EF88DD303B988D00BBD960 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +91,11 @@
 			);
 			name = StudentBSU;
 			packageProductDependencies = (
+				65EF88D8303B988D00BBD960 /* FirebaseCore */,
+				65EF88DA303B988D00BBD960 /* FirebaseRemoteConfig */,
+				65EF88DC303B988D00BBD960 /* FirebaseStorage */,
+				65EF88DF303B98E000BBD960 /* SwiftSoup */,
+				65EF88E1303B98E000BBD960 /* SwiftSoupProfile */,
 			);
 			productName = StudentBSU;
 			productReference = 652CFF6C2FDD801B00E7E914 /* StudentBSU.app */;
@@ -107,6 +125,10 @@
 			);
 			mainGroup = 652CFF632FDD801B00E7E914;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				65EF88D7303B988D00BBD960 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				65EF88DE303B98E000BBD960 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 652CFF6D2FDD801B00E7E914 /* Products */;
 			projectDirPath = "";
@@ -150,7 +172,6 @@
 				INFOPLIST_FILE = StudentBSU/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -182,7 +203,6 @@
 				INFOPLIST_FILE = StudentBSU/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -345,6 +365,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		65EF88D7303B988D00BBD960 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.18.0;
+			};
+		};
+		65EF88DE303B98E000BBD960 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.13.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		65EF88D8303B988D00BBD960 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65EF88D7303B988D00BBD960 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		65EF88DA303B988D00BBD960 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65EF88D7303B988D00BBD960 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		65EF88DC303B988D00BBD960 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65EF88D7303B988D00BBD960 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		65EF88DF303B98E000BBD960 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65EF88DE303B98E000BBD960 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		65EF88E1303B98E000BBD960 /* SwiftSoupProfile */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65EF88DE303B98E000BBD960 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoupProfile;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 652CFF642FDD801B00E7E914 /* Project object */;
 }
