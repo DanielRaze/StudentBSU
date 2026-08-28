@@ -10,6 +10,8 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+*.xcuserdata
+*.xcworkspace
 *.hmap
 *.ipa
 *.dSYM.zip

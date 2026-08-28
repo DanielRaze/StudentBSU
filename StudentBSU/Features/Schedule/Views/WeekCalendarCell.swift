@@ -1,14 +1,14 @@
 import UIKit
 
 class WeekCalendarCell: UICollectionViewCell {
-    private lazy var dayOfWeek: UILabel = {
+    private let dayOfWeek: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = .appTextSecondary
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    private lazy var dayOfMonth: UILabel = {
+    private let dayOfMonth: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         label.textColor = .appTextPrimary

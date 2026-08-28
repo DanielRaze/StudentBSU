@@ -2,7 +2,7 @@ import UIKit
 
 class AuthFormView: UIView {
     
-    private lazy var emailTitle: UILabel = {
+    private let emailTitle: UILabel = {
         let label = UILabel()
         label.text = "EMAIL"
         label.font = UIFont.systemFont(ofSize: 11, weight: .bold)
@@ -10,7 +10,7 @@ class AuthFormView: UIView {
         label.textColor = .appTextSecondary
         return label
     }()
-    private lazy var emailTextField: UITextField = {
+    private let emailTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "login@student.bsu.by"
         tf.keyboardType = .emailAddress
@@ -19,14 +19,14 @@ class AuthFormView: UIView {
         return tf
     }()
     
-    private lazy var separatorView: UIView = {
+    private let separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = .appDivider
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    private lazy var passTitle: UILabel = {
+    private let passTitle: UILabel = {
         let label = UILabel()
         label.text = "ПАРОЛЬ"
         label.font = UIFont.systemFont(ofSize: 11, weight: .bold)
@@ -35,7 +35,7 @@ class AuthFormView: UIView {
         return label
     }()
     
-    private lazy var passwordTextField: UITextField = {
+    private let passwordTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "......."
         tf.isSecureTextEntry = true

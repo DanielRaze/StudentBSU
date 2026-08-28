@@ -5,7 +5,7 @@ class AddDeadlineView: UIViewController {
     
     var onDeadlineAdded: ((DeadlineModel) -> Void)?
     
-    private(set) lazy var selectedPriority: ImportanceType? = nil {
+    private(set) var selectedPriority: ImportanceType? = nil {
         didSet {
             updatePriorityButtonsAppearance()
         }
@@ -38,7 +38,7 @@ class AddDeadlineView: UIViewController {
         return button
     }()
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Новый дедлайн"
         label.font = .systemFont(ofSize: 18, weight: .bold)

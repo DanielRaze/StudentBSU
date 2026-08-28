@@ -2,7 +2,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    private lazy var buttonGradient: CAGradientLayer = {
+    private let buttonGradient: CAGradientLayer = {
         let gradient = CAGradientLayer()
         gradient.colors = [UIColor.appDarkBlue.cgColor, UIColor.appLightBlue.cgColor]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
@@ -10,7 +10,7 @@ class LoginViewController: UIViewController {
         return gradient
     }()
     
-    private lazy var noButtonGradient: CAGradientLayer = {
+    private let noButtonGradient: CAGradientLayer = {
         let gradient = CAGradientLayer()
         gradient.colors = [UIColor.appDarkBlue.cgColor, UIColor.appLightBlue.cgColor]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
@@ -18,14 +18,14 @@ class LoginViewController: UIViewController {
         return gradient
     }()
     
-    private lazy var logoImageView: UIImageView = {
+    private let logoImageView: UIImageView = {
         let imageView = UIImageView(image: .icon)
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 22, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         return label
     }()
     
-    private lazy var subtitleLabel: UILabel = {
+    private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         label.text = "Войдите через портал student.bsu.by"
@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Продолжить без логина", for: .normal)
         button.tintColor = .white
-        button.layer.insertSublayer(buttonGradient, at: 0)
+        button.layer.insertSublayer(noButtonGradient, at: 0)
         button.layer.cornerRadius = 16
         button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -127,10 +127,9 @@ class LoginViewController: UIViewController {
         if buttonGradient.frame.size != authButton.bounds.size {
             buttonGradient.frame = authButton.bounds
         }
-        if buttonGradient.frame.size != noAuthButton.bounds.size {
-            noButtonGradient.frame = authButton.bounds
+        if noButtonGradient.frame.size != noAuthButton.bounds.size {
+            noButtonGradient.frame = noAuthButton.bounds
         }
-        
     }
     
     @objc private func authTapped() {

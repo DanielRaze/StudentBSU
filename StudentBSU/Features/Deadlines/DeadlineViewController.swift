@@ -29,7 +29,7 @@ class DeadlineViewController: UIViewController {
     }
     
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +56,7 @@ class DeadlineViewController: UIViewController {
         return stackView
     }()
     
-    private lazy var separatorView: UIView = {
+    private let separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = .appDivider
         view.heightAnchor.constraint(equalToConstant: 1).isActive = true

@@ -15,7 +15,7 @@ class SplashViewController: UIViewController {
         return gradient
     }()
     private lazy var logoImageView = UIImageView(image: .icon)
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -23,7 +23,7 @@ class SplashViewController: UIViewController {
         label.textColor = .white
         return label
     }()
-    private lazy var subtitleLabel: UILabel = {
+    private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         label.text = "БЕЛАРУСКI ДЗЯРЖАЎНЫ ЎНIВЕРСIТЭТ"
@@ -31,7 +31,7 @@ class SplashViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    private lazy var loadingIndicator: CustomSpinnerView = {
+    private let loadingIndicator: CustomSpinnerView = {
         let spinnerView = CustomSpinnerView()
         spinnerView.translatesAutoresizingMaskIntoConstraints = false
         spinnerView.widthAnchor.constraint(equalToConstant: 24).isActive = true

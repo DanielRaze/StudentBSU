@@ -4,7 +4,7 @@ class ScheduleViewController: UIViewController {
     
     private var loadTask: Task<Void, Never>?
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -13,7 +13,7 @@ class ScheduleViewController: UIViewController {
         return label
     }()
     
-    private lazy var subtitleLabel: UILabel = {
+    private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         label.text = "3 курс, группа 7 - РФиКТ"

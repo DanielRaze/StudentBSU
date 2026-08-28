@@ -1,7 +1,7 @@
 import UIKit
 
 class NoteCardCell: UICollectionViewCell {
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18, weight: .bold)
         label.textColor = .appTextPrimary
@@ -9,7 +9,7 @@ class NoteCardCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var bodyLabel: UILabel = {
+    private let bodyLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14, weight: .bold)
         label.textColor = .appTextSecondary
@@ -18,7 +18,7 @@ class NoteCardCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var tagLabel: UILabel = {
+    private let tagLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12, weight: .bold)
         label.textColor = .appTextPrimary
@@ -36,7 +36,7 @@ class NoteCardCell: UICollectionViewCell {
         return view
     }()
     
-    private lazy var dateLabel: UILabel = {
+    private let dateLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 13, weight: .regular)
         label.textColor = .appTextSecondary

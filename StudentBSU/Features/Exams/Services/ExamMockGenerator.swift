@@ -25,8 +25,6 @@ final class ExamMockGenerator {
             let (viewState, viewStateGen, eventValidation) = try getHiddenAttributes(document: document)
             let sessionLinks: [SessionLinkModel] = try getSessionLinksData(document: document)
             
-            for link in sessionLinks {
-            }
             
             guard let currentSem = sessionLinks.first(where: { $0.target?.contains("Semester\(sem)") == true }) else {
                 print("Не найдена ссылка для семестра \(sem). (Искали Semester\(sem))")

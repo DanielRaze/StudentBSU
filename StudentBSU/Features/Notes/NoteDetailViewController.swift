@@ -17,7 +17,7 @@ class NoteDetailViewController: UIViewController {
             action: #selector(deleteTapped)
         )
     
-    private lazy var dateLabel: UILabel = {
+    private let dateLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12)
         label.textColor = .appTextSecondary
@@ -25,7 +25,7 @@ class NoteDetailViewController: UIViewController {
         return label
     }()
     
-    private lazy var tagTextField: UITextField = {
+    private let tagTextField: UITextField = {
         let textField = UITextField()
         textField.font = .systemFont(ofSize: 13, weight: .bold)
         textField.textColor = .appTextPrimary
@@ -61,7 +61,7 @@ class NoteDetailViewController: UIViewController {
         return stack
     }()
     
-    private lazy var titleTextField: UITextField = {
+    private let titleTextField: UITextField = {
         let textField = UITextField()
         textField.font = .systemFont(ofSize: 24, weight: .bold)
         textField.textColor = .appTextPrimary
@@ -70,7 +70,7 @@ class NoteDetailViewController: UIViewController {
         return textField
     }()
     
-    private lazy var bodyTextView: UITextView = {
+    private let bodyTextView: UITextView = {
         let textView = UITextView()
         textView.font = .systemFont(ofSize: 16)
         textView.textColor = .appTextSecondary

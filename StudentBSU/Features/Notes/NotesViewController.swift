@@ -5,7 +5,7 @@ class NotesViewController: UIViewController {
     private var notes: [Note] = []
     
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -14,7 +14,7 @@ class NotesViewController: UIViewController {
         return label
     }()
     
-    private lazy var subtitleLabel: UILabel = {
+    private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         label.text = "0 заметок"
@@ -51,7 +51,7 @@ class NotesViewController: UIViewController {
         return stackView
     }()
     
-    private lazy var separatorView: UIView = {
+    private let separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = .appDivider
         view.translatesAutoresizingMaskIntoConstraints = false

@@ -4,7 +4,7 @@ class ActionCardView: UIView {
     
     var onToggle: (() -> Void)?
     
-    private lazy var authBadge: UIImageView = {
+    private let authBadge: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -15,7 +15,7 @@ class ActionCardView: UIView {
         return imageView
     }()
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
         label.numberOfLines = 0
@@ -24,7 +24,7 @@ class ActionCardView: UIView {
         return label
     }()
     
-    private lazy var subtitleLabel: UILabel = {
+    private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
@@ -33,7 +33,7 @@ class ActionCardView: UIView {
         return label
     }()
     
-    private lazy var detailLabel: UILabel = {
+    private let detailLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         label.textColor = .appTextTertiary

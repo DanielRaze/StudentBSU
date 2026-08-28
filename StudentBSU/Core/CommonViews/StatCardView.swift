@@ -1,7 +1,7 @@
 import UIKit
 
 class StatCardView: UIView {
-    private lazy var countLabel: UILabel = {
+    private let countLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 26, weight: .bold)
         label.textColor = .appTextPrimary
@@ -10,7 +10,7 @@ class StatCardView: UIView {
         return label
     }()
     
-    private lazy var infoLabel: UILabel = {
+    private let infoLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = .appTextSecondary

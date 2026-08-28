@@ -17,7 +17,7 @@ class DeadlineTableCell: UITableViewCell {
         return button
     }()
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         label.textColor = .appTextPrimary
@@ -47,7 +47,7 @@ class DeadlineTableCell: UITableViewCell {
         return stackView
     }()
     
-    private lazy var infoLabel: UILabel = {
+    private let infoLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = .appTextSecondary

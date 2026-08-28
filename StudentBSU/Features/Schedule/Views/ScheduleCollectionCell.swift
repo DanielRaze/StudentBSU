@@ -2,7 +2,7 @@ import UIKit
 
 class ScheduleCollectionCell: UICollectionViewCell {
     
-    private lazy var colorIndicator: UIView = {
+    private let colorIndicator: UIView = {
         let view = UIView()
         view.widthAnchor.constraint(equalToConstant: 4).isActive = true
         view.layer.cornerRadius = 2
@@ -13,7 +13,7 @@ class ScheduleCollectionCell: UICollectionViewCell {
         return view
     }()
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.textColor = .appTextPrimary
@@ -46,7 +46,7 @@ class ScheduleCollectionCell: UICollectionViewCell {
         return stackView
     }()
     
-    private lazy var timeTitle: UILabel = {
+    private let timeTitle: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         label.textColor = .appPrimary
@@ -55,7 +55,7 @@ class ScheduleCollectionCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var locationTitle: UILabel = {
+    private let locationTitle: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = .appTextSecondary
@@ -73,7 +73,7 @@ class ScheduleCollectionCell: UICollectionViewCell {
         return stackView
     }()
     
-    private lazy var teacherLabel: UILabel = {
+    private let teacherLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = .appTextTertiary

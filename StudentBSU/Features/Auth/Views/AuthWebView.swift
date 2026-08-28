@@ -13,7 +13,7 @@ class AuthWebView: UIViewController {
     private var login: String?
     private var password: String?
     
-    private lazy var authWebView: WKWebView = {
+    private let authWebView: WKWebView = {
         let config = WKWebViewConfiguration()
         let webView = WKWebView(frame: .zero, configuration: config)
         webView.translatesAutoresizingMaskIntoConstraints = false

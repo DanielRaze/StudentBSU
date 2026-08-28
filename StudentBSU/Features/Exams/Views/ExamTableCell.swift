@@ -5,7 +5,7 @@ class ExamTableCell: UITableViewCell {
     private let calendar = Calendar.current
     private let formatter = DateFormatter()
     
-    private lazy var cardView: UIView = {
+    private let cardView: UIView = {
         let view = UIView()
         view.backgroundColor = .appCardBackground
         view.layer.cornerRadius = 16
@@ -15,7 +15,7 @@ class ExamTableCell: UITableViewCell {
     
     private lazy var dateBadge: DateBadgeView = DateBadgeView()
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         label.textColor = .appTextPrimary
@@ -23,7 +23,7 @@ class ExamTableCell: UITableViewCell {
         return label
     }()
     
-    private lazy var subtitleLabel: UILabel = {
+    private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = .appTextSecondary
@@ -43,7 +43,7 @@ class ExamTableCell: UITableViewCell {
     }()
     
     
-    private lazy var infoLabel: UILabel = {
+    private let infoLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = .appTextTertiary

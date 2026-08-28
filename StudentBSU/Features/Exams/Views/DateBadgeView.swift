@@ -2,7 +2,7 @@ import UIKit
 
 class DateBadgeView: UIView {
     
-    private lazy var dayLabel: UILabel = {
+    private let dayLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.numberOfLines = 1
@@ -10,7 +10,7 @@ class DateBadgeView: UIView {
         return label
     }()
     
-    private lazy var monthLabel: UILabel = {
+    private let monthLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.numberOfLines = 1

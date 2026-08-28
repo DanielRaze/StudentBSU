@@ -10,7 +10,7 @@ class ProfileViewController: UIViewController {
     
     private var loadTask: Task<Void, Never>?
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
         return label
     }()
     
-    private lazy var separatorView: UIView = {
+    private let separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = .appDivider
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -27,13 +27,13 @@ class ProfileViewController: UIViewController {
         return view
     }()
     
-    private lazy var authCardView: ActionCardView = {
+    private let authCardView: ActionCardView = {
         let actionCard = ActionCardView()
         actionCard.translatesAutoresizingMaskIntoConstraints = false
         return actionCard
     }()
     
-    private lazy var dormitoryTitle: UILabel = {
+    private let dormitoryTitle: UILabel = {
         let label = UILabel()
         label.text = "ОБЩЕЖИТИЕ"
         label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
@@ -42,7 +42,7 @@ class ProfileViewController: UIViewController {
         return label
     }()
     
-    private lazy var dormitoryCardView: ActionCardView = {
+    private let dormitoryCardView: ActionCardView = {
         let actionCard = ActionCardView()
         actionCard.configure(icon: UIImage(systemName: "house"), iconBackgroundColor: .appDormitoryBackground ,
                              title: "Данные недоступны",
@@ -71,7 +71,7 @@ class ProfileViewController: UIViewController {
         return tableView
     }()
     
-    private lazy var notificationTitle: UILabel = {
+    private let notificationTitle: UILabel = {
         let label = UILabel()
         label.text = "УВЕДОМЛЕНИЯ"
         label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
@@ -153,7 +153,7 @@ class ProfileViewController: UIViewController {
                              subtitle: "Войдите в студент БГУ для полного доступа",
                              buttonTitle: "Войти")
         authCardView.onToggle = { [weak self] in
-            guard let self = self else { return }
+            guard self != nil else { return }
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                   let window = windowScene.windows.first else { return}
             
