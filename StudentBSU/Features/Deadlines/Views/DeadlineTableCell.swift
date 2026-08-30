@@ -91,10 +91,12 @@ class DeadlineTableCell: UITableViewCell {
                                          range: NSRange(location: 0, length: attributeString.length))
             titleLabel.attributedText = attributeString
             titleLabel.textColor = .appTextSecondary
-        }
-        else{
-            titleLabel.attributedText = nil
-            titleLabel.text = deadline.name
+        } else {
+            let attributeString = NSMutableAttributedString(string: deadline.name)
+            attributeString.addAttribute(.strikethroughStyle,
+                                         value: 0,
+                                         range: NSRange(location: 0, length: attributeString.length))
+            titleLabel.attributedText = attributeString
             titleLabel.textColor = .appTextPrimary
         }
         
@@ -180,7 +182,6 @@ class DeadlineTableCell: UITableViewCell {
         onToggle = nil
         titleLabel.text = nil
         titleLabel.attributedText = nil
-        daysBadge.configuration = nil
     }
 }
 

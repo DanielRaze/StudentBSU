@@ -103,7 +103,7 @@ class ScheduleViewController: UIViewController {
         ])
     }
     
-    private func loadOnlineSchedule() async  {
+    private func loadOnlineSchedule() async {
         do {
             let result = try await ScheduleService.shared.fetchCurrentStudentSchedule()
                 

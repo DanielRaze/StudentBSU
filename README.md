@@ -10,15 +10,25 @@ iOS-приложение для студентов факультета РФиК
 *   **Дедлайны**: локальный трекер задач.
 *   **Профиль**: авторизация на портале БГУ, вывод информации о студенте и общежитии.
 
+## Скриншоты
+
+<p align="center">
+  <img src="screenshots/schedule.png" width="220">
+  <img src="screenshots/session.png" width="220">
+  <img src="screenshots/notes.png" width="220">
+  <img src="screenshots/profile.png" width="220">
+  <img src="screenshots/deadlines.png" width="220">
+</p>
+
 ## Стек технологий
 
-*   **Язык**: Swift 5
+*   **Язык**: Swift
 *   **UI**: Programmatic UIKit (без Storyboards)
 *   **Асинхронность**: async/await
 *   **Сеть и парсинг**: URLSession, SwiftSoup
 *   **Локальное хранилище**: Core Data, UserDefaults, FileManager (кэш)
 *   **Backend**: Firebase (Remote Config, Storage)
-*   **Архитектура**: Feature-based MVC/MVVM
+*   **Архитектура**: Feature-based MVC
 
 ## Запуск проекта
 

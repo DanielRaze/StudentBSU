@@ -186,10 +186,10 @@ extension DeadlineViewController: UITableViewDataSource, UITableViewDelegate {
         case .active:
             model = activeCards[indexPath.row]
             cell.configure(with: model, isCompleted: false)
-            
-            cell.onToggle = {[weak self, weak tableView] in
+            cell.onToggle = {[weak self, weak tableView, weak cell] in
                 guard let self = self,
-                        let currentIndexPath = tableView?.indexPath(for: cell)
+                      let cell = cell,
+                      let currentIndexPath = tableView?.indexPath(for: cell)
                 else { return}
                 
                 let item = self.activeCards.remove(at: currentIndexPath.row)
@@ -201,10 +201,10 @@ extension DeadlineViewController: UITableViewDataSource, UITableViewDelegate {
         case .completed:
             model = completedCards[indexPath.row]
             cell.configure(with: model, isCompleted: true)
-            
-            cell.onToggle = {[weak self, weak tableView] in
+            cell.onToggle = {[weak self, weak tableView, weak cell] in
                 guard let self = self,
-                        let currentIndexPath = tableView?.indexPath(for: cell)
+                      let cell = cell,
+                      let currentIndexPath = tableView?.indexPath(for: cell)
                 else { return}
                 
                 let item = self.completedCards.remove(at: currentIndexPath.row)
@@ -239,5 +239,20 @@ extension DeadlineViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return DeadlineSection(rawValue: section)?.sectionTitle
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete, let section = DeadlineSection(rawValue: indexPath.section) else { return }
+        
+        switch section {
+        case .active:
+            activeCards.remove(at: indexPath.row)
+            DeadlineStorage.shared.saveActive(activeCards)
+        case .completed:
+            completedCards.remove(at: indexPath.row)
+            DeadlineStorage.shared.saveCompleted(completedCards)
+        }
+        
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
